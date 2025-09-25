@@ -7,12 +7,12 @@ struct Player : BNM::UnityEngine::MonoBehaviour
 {
     static Class GetClass()
     {
-        return Class("GorillaLocomotion", "Player", Image("Assembly-CSharp.dll"));
+        return Class("GorillaLocomotion", "Player");
     }
 
     static MonoType* GetType()
     {
-        static MonoType *type = GetClass().GetMonoType();
+        return MonoType *type = GetClass().GetMonoType();
         return type;
     }
 
@@ -524,3 +524,4 @@ struct Surface : BNM::UnityEngine::MonoBehaviour
         setslipPercentage.Set(percentage);
     }
 };
+
